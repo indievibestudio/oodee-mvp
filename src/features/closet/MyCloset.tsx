@@ -20,7 +20,7 @@ const CLOSET_DATA: ClosetItem[] = [
   {
     id: 3,
     name: "Beige Cargo Pants",
-    imageUrl: "https://images.unsplash.com/photo-1624372990435-08126027376c?w=800&auto=format&fit=crop&q=60"
+    imageUrl: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&auto=format&fit=crop&q=80"
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const CLOSET_DATA: ClosetItem[] = [
   {
     id: 6,
     name: "Bucket Hat",
-    imageUrl: "https://images.unsplash.com/photo-1576872481759-c2763b361a6c?w=800&auto=format&fit=crop&q=60"
+    imageUrl: "https://images.unsplash.com/photo-1576871333020-f463c6d691e8?w=600&auto=format&fit=crop&q=80"
   }
 ]
 
