@@ -6,21 +6,21 @@ import { UploadModal } from './UploadModal'
 const MOCK_DATA: Outfit[] = [
   {
     id: 1,
-    styleName: "Urban Techwear",
-    description: "Futuristic street style with utility vests and cargo pants.",
-    imageUrl: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800&auto=format&fit=crop&q=60"
+    styleName: "90S RETRO VIBE",
+    description: "Vibrant oversized flannels paired with classic high-waist denim.",
+    imageUrl: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&auto=format&fit=crop&q=80"
   },
   {
     id: 2,
-    styleName: "90s Retro Vibe",
-    description: "Vibrant oversized flannels paired with classic high-waist denim.",
-    imageUrl: "https://images.unsplash.com/photo-1529139513402-f20a5959577a?w=800&auto=format&fit=crop&q=60"
+    styleName: "TECHWEAR UTILITY",
+    description: "Future-proof cyberpunk aesthetics with functional cargo straps.",
+    imageUrl: "https://images.unsplash.com/photo-1509319117193-57bab727e09d?w=600&auto=format&fit=crop&q=80"
   },
   {
     id: 3,
-    styleName: "Minimalist Chic",
-    description: "Clean silhouettes and neutral tones for a sophisticated everyday look.",
-    imageUrl: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&auto=format&fit=crop&q=60"
+    styleName: "MINIMALIST CHIC",
+    description: "Clean silhouettes and monochrome tones for everyday elegance.",
+    imageUrl: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80"
   }
 ]
 
