@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FF3B5C;
+  --color-secondary: #00F5FF;
+  --color-accent: #AA3BFF;
+  --color-dark: #08060D;
+  --color-light: #F4F3EC;
+  
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Archivo Black", system-ui, sans-serif;
+}
+
+:root {
+  background-color: #f0f0f0; /* Soft gray background for the "desk" */
+  color: var(--color-dark);
+  font-family: var(--font-sans);
+}
+
+@layer base {
+  body {
+    @apply antialiased overflow-x-hidden;
+  }
+}
