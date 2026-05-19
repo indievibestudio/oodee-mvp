@@ -18,7 +18,6 @@ export const OutfitCard: React.FC<OutfitCardProps> = ({ outfit, onSwipe }) => {
   
   // Drag transformations: rotation and opacity for stamps
   const rotate = useTransform(x, [-200, 200], [-25, 25])
-  const opacity = useTransform(x, [-200, -150, 0, 150, 200], [0, 1, 1, 1, 0])
   
   // Stamp opacity logic
   const likeOpacity = useTransform(x, [50, 150], [0, 1])
@@ -38,7 +37,7 @@ export const OutfitCard: React.FC<OutfitCardProps> = ({ outfit, onSwipe }) => {
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
       onDragEnd={handleDragEnd}
-      whileGrab={{ scale: 1.05 }}
+      whileTap={{ scale: 1.05 }}
       className="absolute inset-0 cursor-grab active:cursor-grabbing"
     >
       <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border-2 border-dark/5 bg-white">
