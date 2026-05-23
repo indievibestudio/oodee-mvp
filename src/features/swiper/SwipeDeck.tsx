@@ -76,12 +76,17 @@ export const SwipeDeck = () => {
           <div className="relative w-full h-full max-w-[360px]">
             {outfits.map((outfit, index) => (
               index < 2 && (
-                <OutfitCard
-                  key={outfit.id}
-                  outfit={outfit}
-                  onSwipe={handleSwipe}
-                  onClick={() => setIsModalOpen(true)}
-                />
+                <div 
+                  key={outfit.id} 
+                  className="absolute inset-0" 
+                  style={{ zIndex: 50 - index }}
+                >
+                  <OutfitCard
+                    outfit={outfit}
+                    onSwipe={handleSwipe}
+                    onClick={() => setIsModalOpen(true)}
+                  />
+                </div>
               )
             ))}
           </div>

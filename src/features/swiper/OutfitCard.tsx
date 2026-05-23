@@ -38,16 +38,25 @@ export const OutfitCard: React.FC<OutfitCardProps> = ({ outfit, onSwipe, onClick
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
       onDragEnd={handleDragEnd}
-      onTap={() => onClick?.()}
+      onTap={() => {
+        // Tap handler for touch devices
+        onClick?.()
+      }}
+      onClick={(e) => {
+        // Fallback for mouse clicks, ensuring it's not a drag
+        if (Math.abs(x.get()) < 5) {
+          onClick?.()
+        }
+      }}
       whileTap={{ scale: 1.05 }}
-      className="absolute inset-0 cursor-grab active:cursor-grabbing"
+      className="absolute inset-0 cursor-grab active:cursor-grabbing select-none"
     >
       <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border-2 border-dark/5 bg-white">
         {/* Outfit Image */}
         <img
           src={outfit.imageUrl}
           alt={outfit.styleName}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover pointer-events-none"
         />
 
         {/* LIKE Stamp */}
@@ -67,7 +76,7 @@ export const OutfitCard: React.FC<OutfitCardProps> = ({ outfit, onSwipe, onClick
         </motion.div>
 
         {/* Text Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-20">
+        <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-20 pointer-events-none">
           <h3 className="text-2xl font-black text-white uppercase tracking-tighter mb-1">
             {outfit.styleName}
           </h3>
