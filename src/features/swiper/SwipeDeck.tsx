@@ -80,6 +80,7 @@ export const SwipeDeck = () => {
                   key={outfit.id}
                   outfit={outfit}
                   onSwipe={handleSwipe}
+                  onClick={() => setIsModalOpen(true)}
                 />
               )
             ))}

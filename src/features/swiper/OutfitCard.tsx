@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion, useMotionValue, useTransform } from 'framer-motion'
+import { motion, useMotionValue, useTransform, PanInfo } from 'framer-motion'
 
 export interface Outfit {
   id: number
@@ -11,9 +11,10 @@ export interface Outfit {
 interface OutfitCardProps {
   outfit: Outfit
   onSwipe: (direction: 'left' | 'right') => void
+  onClick?: () => void
 }
 
-export const OutfitCard: React.FC<OutfitCardProps> = ({ outfit, onSwipe }) => {
+export const OutfitCard: React.FC<OutfitCardProps> = ({ outfit, onSwipe, onClick }) => {
   const x = useMotionValue(0)
   
   // Drag transformations: rotation and opacity for stamps
@@ -23,7 +24,7 @@ export const OutfitCard: React.FC<OutfitCardProps> = ({ outfit, onSwipe }) => {
   const likeOpacity = useTransform(x, [50, 150], [0, 1])
   const passOpacity = useTransform(x, [-50, -150], [0, 1])
 
-  const handleDragEnd = (_: any, info: any) => {
+  const handleDragEnd = (_: unknown, info: PanInfo) => {
     if (info.offset.x > 100) {
       onSwipe('right')
     } else if (info.offset.x < -100) {
@@ -37,6 +38,7 @@ export const OutfitCard: React.FC<OutfitCardProps> = ({ outfit, onSwipe }) => {
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
       onDragEnd={handleDragEnd}
+      onTap={() => onClick?.()}
       whileTap={{ scale: 1.05 }}
       className="absolute inset-0 cursor-grab active:cursor-grabbing"
     >
