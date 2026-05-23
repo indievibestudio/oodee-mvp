@@ -21,6 +21,36 @@ const MOCK_DATA: Outfit[] = [
     styleName: "MINIMALIST CHIC",
     description: "Clean silhouettes and monochrome tones for everyday elegance.",
     imageUrl: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80"
+  },
+  {
+    id: 4,
+    styleName: "Y2K VINTAGE",
+    description: "Colorful butterfly clips, low-rise jeans, and iconic baby tees.",
+    imageUrl: "https://images.unsplash.com/photo-1621434533171-881881775f92?w=600&auto=format&fit=crop&q=80"
+  },
+  {
+    id: 5,
+    styleName: "GORPCORE EXPLORER",
+    description: "Heavy-duty puffers and technical trail shoes for the urban wilderness.",
+    imageUrl: "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?w=600&auto=format&fit=crop&q=80"
+  },
+  {
+    id: 6,
+    styleName: "QUIET LUXURY",
+    description: "Sophisticated tailoring and premium fabrics in soft neutral palettes.",
+    imageUrl: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&auto=format&fit=crop&q=80"
+  },
+  {
+    id: 7,
+    styleName: "STREETWEAR CORE",
+    description: "Bold graphic hoodies and limited edition kicks that define the culture.",
+    imageUrl: "https://images.unsplash.com/photo-1552066344-2464c1135c32?w=600&auto=format&fit=crop&q=80"
+  },
+  {
+    id: 8,
+    styleName: "OLD MONEY AESTHETIC",
+    description: "Classic polo shirts and linen trousers for a timeless, polished look.",
+    imageUrl: "https://images.unsplash.com/photo-1594932224010-74f43a373307?w=600&auto=format&fit=crop&q=80"
   }
 ]
 
